@@ -1,0 +1,100 @@
+/* form.css */
+
+/* General body styling */
+body {
+    font-family: sans-serif;
+    background: linear-gradient(#f78282, #f7eccf);
+    background-attachment: fixed; /* Prevent background from scrolling */
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed to min-height for smaller content */
+    background-size: cover; 
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    font-family: cursive;
+    color: whitesmoke;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    width: 35rem;
+    height: 25rem;
+    color: whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 10px 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Input and select elements styling */
+input[type="text"],
+select {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* Back to Home button styling */
+.back-to-home {
+    margin-top: -8rem; /* Reduced top margin */
+    text-align: center;
+}
+
+.back-to-home a {
+    color: white;
+    text-decoration: none;
+    background-color: #155799;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home a:hover {
+    background-color: #159957;
+    transform: translateY(-5px); /* Adjusted transform */
+}
+
+/* Responsive form styling */
+@media screen and (max-width: 768px) {
+    form {
+        width: 85%;
+    }
+}

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <title>CommentSense</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="head">
+    <nav class="navbar navbar-expand-lg ">
+
+      <!-- <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"> -->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CommentSense</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('features') }}">Features</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Price List</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('show') }}">Show Data</a></li>
+                <li><a class="dropdown-item" href="#">Upload to Cloud</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex ms-auto">
+            <button class="btn btn-outline-success me-2" type="button" style="color: rgb(2, 2, 2);">Register</button>
+            <button class="btn btn-sm btn-outline-secondary" type="button"
+              style="color: rgb(58, 57, 57);">Login</button>
+          </form>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- 
+  <div class="container1"> -->
+  <div class="caption">
+    <h1>"Uncover the critics' whispers across all social realms."</h1>
+    <p>Unlock the power of ML to swiftly detect and address any negative sentiments lurking within your social media
+      interactions!</p>
+    <p><a class="btn btn-lg btn-primary" href="{{ url_for('features') }}" role="button">Learn more</a></p>
+  </div>
+  <!-- </div> -->
+
+
+
+  <main role="main">
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Marketing messaging and featurettes
+      ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="{{ url_for('static', filename='images/inst.png') }}"
+            alt="Generic placeholder image" width="170" height="110">
+          <h2>Instagram</h2>
+          &nbsp;
+          <p><a class="btn btn-secondary" href="#" role="button">Click »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="{{ url_for('static', filename='images/you.png') }}"
+            alt="Generic placeholder image" width="150" height="150">
+          <h2>YouTube</h2>
+          &nbsp;
+          <p><a class="btn btn-secondary" href="{{ url_for('form') }}" role="button">Click »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="{{ url_for('static', filename='images/x.png') }}"
+            alt="Generic placeholder image" width="120" height="110">
+          <h2>Twitter</h2>
+          &nbsp;
+          <p><a class="btn btn-secondary" href="#" role="button">Click »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Machine learning<span class="text-muted"> </span></h2>
+          <h3>Implementation</h3>
+          &nbsp;
+          <p>An LSTM (Long Short-Term Memory) model can effectively detect negative comments from social media platforms by leveraging sequential patterns in text data, allowing for accurate sentiment analysis and automated flagging of negative content.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid" src="{{ url_for('static', filename='images/machine Learning.png') }}"
+            style="width: 500px; height: 500px;">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="para-item col-md-7 order-md-2">
+          <h2 class="featurette-heading">get all the <span class="text-muted"> real time negative comments at once..</span>
+          </h2>
+          <p class="lead">At the end the result will be generated and the user can see all the negative comments from
+            his/her social handles....</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/1.jpg') }}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/2.jpg') }}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/social-comments.png') }}" class="d-block w-100"
+                  alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18fb02659b8%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18fb02659b8%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.1171875%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;"> -->
+        </div>
+      </div>
+
+
+      <!-- FOOTER -->
+      <!-- <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        
+      </footer> -->
+
+      <footer class="container">
+        <a href="#" class="btn btn-primary float-right">Back to top</a>
+      </footer>
+
+  </main>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none"
+    style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+    <defs>
+      <style type="text/css"></style>
+    </defs>
+    <text x="0" y="25"
+      style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text>
+  </svg>
+
+
+</body>
+
+</html>

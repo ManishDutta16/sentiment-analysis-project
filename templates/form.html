@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+    <title>YouTube Comments</title>
+   
+
+</head>
+<!-- action="{{ url_for('handle_youtube_options') }}" -->
+<body>
+    <h2>YouTube Comments</h2>
+    <form action="{{ url_for('read_form')}}" method="post">
+        <label for="video_link">Enter the YouTube video link:</label><br>
+        <input type="text" id="video_link" name="video_link" required><br><br>
+
+        <label for="choice">Choose an option:</label><br>
+        <select id="choice" name="choice">
+            <option value="1">Download Comments</option>
+            <option value="2">Download Translated Comments</option>
+            <option value="3">Review Positive Comments</option>
+            <option value="3">Review Negative Comments</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit" id="submitid">
+
+        <div class="container text-center">
+            <canvas id="sentimentChart" width="400" height="200"></canvas>
+            <div class="back-to-home d-flex justify-content-center">
+                <p><a class="btn btn-lg btn-primary" href="{{ url_for('home') }}" role="button">Back to Home</a></p>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("youtube-link").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            document.getElementById("levitating-form").style.display = "block"; // Show the form
+        });
+    </script>
+
+    
+
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+
+</html>
